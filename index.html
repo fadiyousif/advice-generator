@@ -10,12 +10,32 @@
          sizes="32x32"
          href="./images/favicon-32x32.png"
       />
+      <link rel="stylesheet" href="./style.css" />
 
-      <title>Frontend Mentor | Advice generator app</title>
+      <title>Advice Generator</title>
+
+      <script src="./script.js" defer></script>
    </head>
    <body>
-      Advice #<!-- Advice ID goes here -->
+      <div class="container">
+         <div id="advice-id"></div>
+         <p id="advice-text"></p>
 
-      "<!-- Advice text goes here -->"
+         <div class="pattern-divider-container">
+            <img
+               src="./images/pattern-divider-mobile.svg"
+               srcset="
+                  ./images/pattern-divider-mobile.svg  295w,
+                  ./images/pattern-divider-desktop.svg 444w
+               "
+               id="pattern-divider"
+               alt="pattern divider"
+            />
+         </div>
+      </div>
+
+      <button id="dice-button">
+         <img src="./images/icon-dice.svg" alt="dice icon" />
+      </button>
    </body>
 </html>
