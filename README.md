@@ -9,6 +9,12 @@ My solution to the **Advice Generator** challenge on [Frontend Mentor](https://w
 -  Prevent the same advice from being displayed twice
 -  Skip advice that isn't formatted correctly in the API
 
+## Coded with
+
+-  HTML
+-  CSS
+-  JavaScript
+
 <hr>
 
 Live Site URL: https://fadiyousif.github.io/advice-generator/
