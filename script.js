@@ -6,10 +6,23 @@ const diceButton = document.getElementById("dice-button");
 const adviceToSkip = [146, 76];
 const adviceRendered = [];
 
+let canFetchAdvice = true;
+
 const fetchAdvice = () => {
+   if (!canFetchAdvice) {
+      return;
+   }
+
    fetch(`https://api.adviceslip.com/advice`)
       .then((res) => res.json())
       .then((adviceObj) => renderAdvice(adviceObj))
+      .then(() => {
+         // prevent spamming
+         canFetchAdvice = false;
+         setTimeout(() => {
+            canFetchAdvice = true;
+         }, 1000);
+      })
       .catch((err) => console.error(err));
 };
 
